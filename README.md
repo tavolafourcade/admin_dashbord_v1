@@ -5,3 +5,5 @@
 ### You're free to use it and learn more about this framework
 
 ### You can add the backend if you want.
+
+### Reach me on Linkedin and Instagram

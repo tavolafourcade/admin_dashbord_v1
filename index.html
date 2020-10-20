@@ -14,6 +14,40 @@
 </head>
 
 <body>
+  <nav class="cyan darken-2">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">Admin</a>
+
+        <a href="#" data-activates="side-nav" class="button-collapse show-on-large right">
+          <!-- Menu icons -->
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li class="active">
+            <a href="index.html">Dashboard</a>
+          </li>
+
+          <li>
+            <a href="posts.html">Posts</a>
+          </li>
+
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+
+          <li>
+            <a href="comments.html">Comments</a>
+          </li>
+
+          <li>
+            <a href="users.html">Users</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -21,7 +55,7 @@
   <script>
     $(document).ready(function () {
       //Init Side nav
-     
+     $(".button-collapse").sideNav();
 
     });
   </script>
