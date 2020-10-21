@@ -4,6 +4,8 @@
 
 ### It also includes CDN of Canvas JS `<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>`
 
+### CKEDITOR was used for the Add Post modal https://cdn.ckeditor.com/
+
 ### Preloader and other modals should always go at the end
 
 ### You're free to use it and learn more about this framework
