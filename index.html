@@ -320,6 +320,35 @@
     </ul>
   </div>
 
+  <!-- Add Post Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select Option</option>
+            <option value="1">Web Development</option>
+            <option value="2">Graphic Design</option>
+            <option value="3">Tech Gadgets</option>
+            <option value="3">Other</option>
+          </select>
+          <label >Category</label>
+        </div>
+        <div class="input-field">
+          <textarea name="body" id="body" class="materialize-textarea"></textarea>
+          <label for="body">Body</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Preloader -->
   <div class="loader preloader-wrapper big active">
@@ -339,6 +368,7 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="js/chart.js"></script>
+  
   <script>
     //Hide Sections
     $('.section').hide();
@@ -353,6 +383,12 @@
 
         //Init Side nav
         $(".button-collapse").sideNav();
+
+        //Init Modal
+        $('.modal').modal();
+
+        //Init Select for the Modal
+        $('select').material_select();
 
         //Counter
         $('.count').each(function(){
