@@ -417,78 +417,78 @@
   <script src="js/chart.js"></script>
   
   <script>
-    // Hide Sections
+    //Hide Sections
     $('.section').hide();
 
-    setTimeout(function () {
+    setTimeout(function(){
       $(document).ready(function () {
-        // Show sections
+        //Show sections
         $('.section').fadeIn();
 
-        // Hide preloader
+        //Hide preloader
         $('.loader').fadeOut();
 
         //Init Side nav
-        $('.button-collapse').sideNav();
+        $(".button-collapse").sideNav();
 
-        // Init Modal
+        //Init Modal
         $('.modal').modal();
 
-        // Init Select
+        //Init Select for the Modal
         $('select').material_select();
 
-        // Counter
-        $('.count').each(function () {
+        //Counter
+        $('.count').each(function(){
           $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
           }, {
-              duration: 1000,
-              easing: 'swing',
-              step: function (now) {
-                $(this).text(Math.ceil(now));
-              }
-            });
+            duration: 1000,
+            easing: 'swing',
+            step: function(now){
+              $(this).text(Math.ceil(now));
+            }
+          });
         });
 
         // Comments - Approve & Deny
-        $('.approve').click(function (e) {
+        $('.approve').click(function(e){
           Materialize.toast('Comment Approved', 3000);
           e.preventDefault();
-        });
-        $('.deny').click(function (e) {
-          Materialize.toast('Comment Denied', 3000);
+          // $('.section').hide();
+        }); 
+
+        $('.deny').click(function(e){
+          Materialize.toast('Comment Approved', 2000);
           e.preventDefault();
         });
 
         // Quick Todos
-        $('#todo-form').submit(function (e) {
+        $('#todo-form').submit(function(e){
+          //console.log($('#todo').val());
           const output = `<li class="collection-item">
-                <div>${$('#todo').val()}
-                  <a href="#!" class="secondary-content delete">
-                    <i class="material-icons">close</i>
-                  </a>
-                </div>
-              </li>`;
-
+                  <div>${$('#todo').val()}
+                    <a href="#!" class="secondary-content delete">
+                      <i class="material-icons">close</i>
+                    </a>
+                  </div>
+                </li>`;
           $('.todos').append(output);
-
-          Materialize.toast('Todo Added', 3000);
-
+          Materialize.toast("Todo Added",2000);
           e.preventDefault();
         });
 
-        // Delete Todos
-        $('.todos').on('click', '.delete', function (e) {
+        // Delete Todos with event delegation
+        $('.todos').on('click', '.delete', function(e){
           $(this).parent().parent().remove();
-          Materialize.toast('Todo Removed', 3000);
-
+          Materialize.toast("Removed",2000);
           e.preventDefault();
         });
 
-        CKEDITOR.replace('body');
-
+        CKEDITOR.replace( 'body');
       });
-    }, 1000);
+    },1000);
+
+    
   </script>
 </body>
 
